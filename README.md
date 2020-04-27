@@ -26,53 +26,56 @@ For this, you are going to have to manipulate / design a few types. We are provi
 Let’s go over the details you will need to implement for each type. Note that written in orange are all the methods and attributes given to you already:
 
 ### `PostfixExpression`
-Private Attributes: 
+##### Private Attributes: 
 * `String expression`
-Methods:
-Constructors: 
+#### Methods:
+##### Constructors: 
 * `PostfixExpression()`
 * `PostfixExpression(String e)`
-Accessors / getters:
+##### Accessors / getters:
 * `getExpression()`: returns expression string
-Modifiers / setters:
+##### Modifiers / setters:
 * `setExpression(String newExpr)`: assigns newExpr to expression
-Other methods:
+##### Other methods:
 * `Evaluate()`: traverses the expression using IntStack and returns an integer: the integer value of the expression
 * `Print()`: prints out the expression in postfix notation
 
 ### `ExpressionBT`
-Private Attributes: 
+#### Private Attributes: 
 * `String type`
 * `char operator`
 * `int value`
 * `String variable`
 * `ExpressionBT left`
 * `ExpressionBT right`
-Methods:
-Constructors: 
+#### Methods:
+##### Constructors: 
 * `ExpressionBT()`
 * `ExpressionBT(String[] e)`
-Accessors / getters:
+##### Accessors / getters:
 * `getType()`
 * `getValue()`
 * `getVariable()`
 * `getLeft()`
 * `getRight()`
-Modifiers / setters:
+##### Modifiers / setters:
 * `setType(String t)`
 * `setValue(int v)`
 * `setVariable(String var)`
 * `setLeft(ExpressionBT b)`
 * `setRight(ExpressionBT b)`
-Other methods:
+##### Other methods:
 * `Evaluate()`: traverses the expression using recursion and returns an integer: the integer value of the expression. Note: only if there are no variables in the expression. If there are variables, print out that you cannot evaluate and return 0 
 * `Print()`: prints out the expression in infix notation with parentheses, using a `BTStack`
 * `allVariables()`: void method. It prints out all variables in the tree, if any. If there is no variable, it prints out `"no variable in this expression"`. This method should use a `BTQueue`.
 * `includesVariables()`: returns true if the expression contains at least one variable, false otherwise
+
+### Notes
 To implement a few of the above methods, you will need to have a few additional types: 
 * A stack of integers, called `IntStack`
 * A stack of nodes (nodes that form your expression binary tree): `BTStack`
 * A queue of nodes (nodes that form your expression binary tree): `BTQueue`
+
 You are free to use any implementation you like of the above types, provided that they respect the following signatures of methods:
 * For both stacks:
   * `Peek()`: returns the relevant content of the top element without removing it from the stack
@@ -90,6 +93,7 @@ Note: we provide you with:
 •	Starter code for `IntStack.java`;
 •	Starter code for `BTStack.java`; and
 •	Starter code for `BTQueue.java`.
+
 You have to complete all of the above files by following the guidelines provided to you earlier in this document.
 
 ## Grading
