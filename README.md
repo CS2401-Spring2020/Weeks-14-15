@@ -15,13 +15,13 @@ You will use the binary tree representation to: 1/ evaluation your expression, 2
 
 ## Let’s build data structures
 For this, you are going to have to manipulate / design a few types. We are providing you with the following guidelines:
-*	Post-fix notation of an arithmetic expression → represented by a string. You will define a type PostfixExpression.
-*	Binary tree of an arithmetic expression → represented by a binary tree of data, called ExpressionBT that contains:
- *	`String type`: can be `"var"`, `"value”`, or `"operator"`
- *	`char operator`: can be `'+'`, `'-'`, `'*'`, `'/'`
- *	`int value`
- *	`String variable`: can be any identifier for a variable, e.g., `"x"`, `"y"`, `"z"`, `"x1"`, `"myVar"`.
- *	Note: depending on what type contains, only one of the other 3 attributes will be relevant.
+*	Post-fix notation of an arithmetic expression → represented by a string. You will define a type `PostfixExpression`.
+*	Binary tree of an arithmetic expression → represented by a binary tree of data, called `ExpressionBT` that contains:
+  *	`String type`: can be `"var"`, `"value”`, or `"operator"`
+  *	`char operator`: can be `'+'`, `'-'`, `'*'`, `'/'`
+  *	`int value`
+  *	`String variable`: can be any identifier for a variable, e.g., `"x"`, `"y"`, `"z"`, `"x1"`, `"myVar"`.
+  *	Note: depending on what type contains, only one of the other 3 attributes will be relevant.
 
 Let’s go over the details you will need to implement for each type. Note that we have provided you with the methods marked with &dagger;.
 
