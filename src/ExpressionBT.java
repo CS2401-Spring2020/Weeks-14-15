@@ -6,7 +6,7 @@ class ExpressionBT{
 	ExpressionBT left;
 	ExpressionBT right;
 	
-	/*
+        /*
 	 * Constructors 
 	 */
 	ExpressionBT(){
@@ -14,26 +14,63 @@ class ExpressionBT{
 	}
 	
 	ExpressionBT(String[] e){
-		
+		// If the root is an operator, split the array into two sub-tree arrays and pass recursively
+		if(e[0].equals("+") || e[0].equals("-") || e[0].equals("*") || e[0].equals("/")) {
+			type = "operator";
+			operator = e[0].charAt(0);
+   
+			// will hold the left tree array
+			String[] left_arr = new String[(e.length - 1)/2];
+			int i = 0;
+                        // pull elements by level and put them in the appropriate place in the new array
+			for(int level=1; e.length > Math.pow(2, level); level++) {
+				for(int j=0; j < Math.pow(2, level)/2; j++) {
+					left_arr[i++] = e[(int)Math.pow(2, level) + j - 1];
+				}
+			}
+			left = new ExpressionBT(left_arr);
+                        // will hold right tree array
+			String[] right_arr = new String[(e.length - 1)/2];
+			i = 0;
+
+            		// pull elements by level and put them in the appropriate place in the new array
+			for(int level=1; e.length > Math.pow(2, level); level++) {
+				for(int j=(int)Math.pow(2, level)/2; j < Math.pow(2, level); j++) {
+					right_arr[i++] = e[(int)Math.pow(2, level)+ j - 1];
+				}
+			}
+                   	right = new ExpressionBT(right_arr);
+        
+        	// if its not an operator, its either a variable or a value
+		}else {
+	            	// try to parse it as a value, if its not an int it must be a variable
+			try {
+				value = Integer.parseInt(e[0]);
+				type = "val";
+			}catch(NumberFormatException exc) {
+				variable = e[0];
+				type = "var";
+			}
+		}
 	}
-	
-	/*
+    
+        /*
 	 * Getters 
 	 */
-	public String getType(){ return ""; }
-	public int getValue(){ return 0; }
-	public String getVariable(){ return ""; }
-	public ExpressionBT getLeft(){ return null;}
-	public ExpressionBT getRight(){ return null; }
+	public String getType(){ return type; }
+	public int getValue(){ return value; }
+	public String getVariable(){ return variable; }
+	public ExpressionBT getLeft(){ return left;}
+	public ExpressionBT getRight(){ return right; }
 	
 	/*
 	 * Setters  
 	 */
-	public void setType(String t){ }
-	public void setValue(int v){ }
-	public void setVariable(String var){ }
-	public void setLeft(ExpressionBT b){ }
-	public void setRight(ExpressionBT b){ }
+	public void setType(String t){ type = t; }
+	public void setValue(int v){ value = v; }
+	public void setVariable(String var){ variable = var; }
+	public void setLeft(ExpressionBT b){ left = b; }
+	public void setRight(ExpressionBT b){ right = b; }
 	
 	/* 
 	 * Other Methods 
