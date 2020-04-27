@@ -86,6 +86,7 @@ You are free to use any implementation you like of the above types, provided tha
   * `Peek()`:returns the relevant content of the head element without removing it from the queue
   * `Dequeue()`: returns the top element and removes it from the queue
   * `Enqueue(data d)`: adds d to the tail of the queue
+  
 Note: You may have to implement additional methods such as: `isEmpty`, `isFull`, depending on your implementation choices.
 
 Note: we provide you with:
