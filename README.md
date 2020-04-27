@@ -23,7 +23,7 @@ For this, you are going to have to manipulate / design a few types. We are provi
  *	`String variable`: can be any identifier for a variable, e.g., `"x"`, `"y"`, `"z"`, `"x1"`, `"myVar"`.
  *	Note: depending on what type contains, only one of the other 3 attributes will be relevant.
 
-Let’s go over the details you will need to implement for each type. Note that written in orange are all the methods and attributes given to you already:
+Let’s go over the details you will need to implement for each type.
 
 ### `PostfixExpression`
 ##### Private Attributes: 
@@ -88,11 +88,11 @@ You are free to use any implementation you like of the above types, provided tha
 Note: You may have to implement additional methods such as: `isEmpty`, `isFull`, depending on your implementation choices.
 
 Note: we provide you with:
-•	Some code pertaining to `ExpressionBT.java`; 
-•	Starter code for `PostfixExpression.java`; 
-•	Starter code for `IntStack.java`;
-•	Starter code for `BTStack.java`; and
-•	Starter code for `BTQueue.java`.
+*	Some code pertaining to `ExpressionBT.java`; 
+*	Starter code for `PostfixExpression.java`; 
+*	Starter code for `IntStack.java`;
+*	Starter code for `BTStack.java`; and
+*	Starter code for `BTQueue.java`.
 
 You have to complete all of the above files by following the guidelines provided to you earlier in this document.
 
