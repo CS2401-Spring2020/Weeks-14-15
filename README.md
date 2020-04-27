@@ -81,7 +81,7 @@ You are free to use any implementation you like of the above types, provided tha
 * For both stacks:
   * `Peek()`: returns the relevant content of the top element without removing it from the stack
   * `Pop()`: returns the top element and removes it from the stack
-  * `Push(data d): adds d on top of the stack
+  * `Push(data d)`: adds d on top of the stack
 * For the queue:
   * `Peek()`:returns the relevant content of the head element without removing it from the queue
   * `Dequeue()`: returns the top element and removes it from the queue
