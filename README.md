@@ -99,30 +99,30 @@ You have to complete all of the above files by following the guidelines provided
 ## Grading
 over 300 pts 
 10 pts	 Code is deemed to be of high quality 
-### `PostfixExpression.java`: 	40 pts
+#### `PostfixExpression.java`: 	40 pts
 * 20 pts 	`Evaluate()`
 * 20 pts 	`Print()`
 
-### `ExpressionBT.java`: 	80 pts
-* 20 pts	Evaluate()
-* 20 pts	Print()
-* 20 pts	allVariables()
-* 20 pts	includesVariables()
+#### `ExpressionBT.java`: 	80 pts
+* 20 pts	`Evaluate()`
+* 20 pts	`Print()`
+* 20 pts	`allVariables()`
+* 20 pts	`includesVariables()`
 
-### `IntStack.java`:		60 pts
-* 20 pts	Peek()
-* 20 pts	Pop()
-* 20 pts	Push(data d)
+#### `IntStack.java`:		60 pts
+* 20 pts	`Peek()`
+* 20 pts	`Pop()`
+* 20 pts	`Push(data d)`
 
-### `BTStack.java`:		60 pts
-* 20 pts	Peek()
-* 20 pts	Pop()
-* 20 pts	Push(data d)
+#### `BTStack.java`:		60 pts
+* 20 pts	`Peek()`
+* 20 pts	`Pop()`
+* 20 pts	`Push(data d)`
 
-### `BTQueue.java`:		60 pts
-* 20 pts	Peek()
-* 20 pts	Dequeue()
-* 20 pts	Enqueue(data d)
+#### `BTQueue.java`:		60 pts
+* 20 pts	`Peek()`
+* 20 pts	`Dequeue()`
+* 20 pts	`Enqueue(data d)`
 
 ## Due date: 
 May 8th at 11:59pm
