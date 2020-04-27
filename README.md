@@ -23,47 +23,47 @@ For this, you are going to have to manipulate / design a few types. We are provi
  *	`String variable`: can be any identifier for a variable, e.g., `"x"`, `"y"`, `"z"`, `"x1"`, `"myVar"`.
  *	Note: depending on what type contains, only one of the other 3 attributes will be relevant.
 
-Let’s go over the details you will need to implement for each type.
+Let’s go over the details you will need to implement for each type. Note that we have provided you with the methods marked with &dagger;.
 
 ### `PostfixExpression`
 ##### Private Attributes: 
-* `String expression`
+* `String expression`&dagger;
 #### Methods:
 ##### Constructors: 
-* `PostfixExpression()`
-* `PostfixExpression(String e)`
+* `PostfixExpression()`&dagger;
+* `PostfixExpression(String e)`&dagger;
 ##### Accessors / getters:
-* `getExpression()`: returns expression string
+* `getExpression()`&dagger;: returns expression string
 ##### Modifiers / setters:
-* `setExpression(String newExpr)`: assigns newExpr to expression
+* `setExpression(String newExpr)`&dagger;: assigns newExpr to expression
 ##### Other methods:
 * `Evaluate()`: traverses the expression using IntStack and returns an integer: the integer value of the expression
 * `Print()`: prints out the expression in postfix notation
 
 ### `ExpressionBT`
 #### Private Attributes: 
-* `String type`
-* `char operator`
-* `int value`
-* `String variable`
-* `ExpressionBT left`
-* `ExpressionBT right`
+* `String type`&dagger;
+* `char operator`&dagger;
+* `int value`&dagger;
+* `String variable`&dagger;
+* `ExpressionBT left`&dagger;
+* `ExpressionBT right`&dagger;
 #### Methods:
 ##### Constructors: 
-* `ExpressionBT()`
-* `ExpressionBT(String[] e)`
+* `ExpressionBT()`&dagger;
+* `ExpressionBT(String[] e)`&dagger;
 ##### Accessors / getters:
-* `getType()`
-* `getValue()`
-* `getVariable()`
-* `getLeft()`
-* `getRight()`
+* `getType()`&dagger;
+* `getValue()`&dagger;
+* `getVariable()`&dagger;
+* `getLeft()`&dagger;
+* `getRight()`&dagger;
 ##### Modifiers / setters:
-* `setType(String t)`
-* `setValue(int v)`
-* `setVariable(String var)`
-* `setLeft(ExpressionBT b)`
-* `setRight(ExpressionBT b)`
+* `setType(String t)`&dagger;
+* `setValue(int v)`&dagger;
+* `setVariable(String var)`&dagger;
+* `setLeft(ExpressionBT b)`&dagger;
+* `setRight(ExpressionBT b)`&dagger;
 ##### Other methods:
 * `Evaluate()`: traverses the expression using recursion and returns an integer: the integer value of the expression. Note: only if there are no variables in the expression. If there are variables, print out that you cannot evaluate and return 0 
 * `Print()`: prints out the expression in infix notation with parentheses, using a `BTStack`
