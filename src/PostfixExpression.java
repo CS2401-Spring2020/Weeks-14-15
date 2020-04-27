@@ -5,17 +5,17 @@ public class PostfixExpression {
 	 * Constructors
 	 */
 	PostfixExpression() {}
-	PostfixExpression(String e) {}
+	PostfixExpression(String e) { expression = e; }
 	
 	/*
 	 * Getters
 	 */
-	public String getExpression() { return ""; }
+	public String getExpression() { return expression; }
 	
 	/*
 	 * Setters
 	 */
-	public void setExpression(String newExpr) {  }
+	public void setExpression(String newExpr) { expression = newExpr; }
 	
 	/*
 	 * Other Methods
