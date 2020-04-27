@@ -46,7 +46,7 @@ class ExpressionBT{
 	            	// try to parse it as a value, if its not an int it must be a variable
 			try {
 				value = Integer.parseInt(e[0]);
-				type = "val";
+				type = "value";
 			}catch(NumberFormatException exc) {
 				variable = e[0];
 				type = "var";
