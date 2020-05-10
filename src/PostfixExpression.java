@@ -1,35 +1,73 @@
-public class PostfixExpression {
-	String expression;
+public class PostfixExpression{
+    
+    private String expression;
 	
-	/*
-	 * Constructors
-	 */
-	PostfixExpression() {}
-	PostfixExpression(String e) { expression = e; }
+    PostfixExpression(){}
+    
+    PostfixExpression(String e){
+        
+        expression = e;
+        
+    }
 	
-	/*
-	 * Getters
-	 */
-	public String getExpression() { return expression; }
-	
-	/*
-	 * Setters
-	 */
-	public void setExpression(String newExpr) { expression = newExpr; }
-	
-	/*
-	 * Other Methods
-	 */
-	
-	// traverses the expression using IntStack and returns an integer: 
-	//    the integer value of the expression
-	public int Evaluate(){
-		return 0;
-	}
-	
-	// prints out the expression in postfix notation
-	public void Print(){
-		
-	}
+    public String getExpression(){
+
+        return expression;
+
+    }
+
+    public void setExpression(String newExpr){
+
+        expression = newExpr;
+
+    }
+
+    public int Evaluate(){
+        
+        String[] expArray = expression.split(" ");
+        
+        IntStack stack = new IntStack(expArray.length);
+        
+        for(int i = 0; i < expArray.length; i++){
+        
+            if(expArray[i].equals("+")){
+            
+                stack.push(stack.pop() + stack.pop());
+            
+            }else if(expArray[i].equals("-")){
+                
+                int b = stack.pop();
+                int a = stack.pop();
+            
+                stack.push(a - b);
+            
+            }else if(expArray[i].equals("/")){
+            
+                int b = stack.pop();
+                int a = stack.pop();
+            
+                stack.push(a / b);
+            
+            }else if(expArray[i].equals("*")){
+            
+                stack.push(stack.pop() * stack.pop());
+            
+            }else{
+            
+                stack.push(Integer.parseInt(expArray[i]));
+            
+            }
+        
+        }
+        
+        return stack.pop();
+
+    }
+
+    public void Print(){
+        
+        System.out.println(expression);
+
+    }
 
 }
